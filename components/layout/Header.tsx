@@ -102,7 +102,7 @@ export default function Header() {
         {/* Mobile Dropdown Glass Menu */}
         <div
           className={cn(
-            "absolute left-0 top-[calc(100%+0.75rem)] w-full overflow-hidden rounded-[2rem] border border-white/60 bg-white/60 backdrop-blur-3xl shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden z-10",
+            "absolute left-0 top-[calc(100%+0.75rem)] w-full overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--background)]/98 backdrop-blur-3xl shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden z-10",
             isOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-8 invisible pointer-events-none"
           )}
         >

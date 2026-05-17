@@ -305,12 +305,14 @@
   @media (max-width: 900px) {
     .carousel-wrapper {
       min-height: auto;
+      padding-bottom: 2rem;
     }
 
     .carousel-inner {
       min-height: auto;
       grid-template-columns: 1fr;
-      padding-block: 4rem 8rem;
+      padding-block: 3rem 6rem;
+      gap: 2.5rem;
     }
 
     .carousel-content-inner {
@@ -318,11 +320,14 @@
     }
 
     .carousel-image-container {
-      min-height: clamp(340px, 78vw, 560px);
+      min-height: clamp(260px, 65vw, 450px);
+      order: -1; /* Show image before text on mobile for better flow */
+      margin-bottom: 1rem;
     }
 
     .carousel-progress-bar {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      bottom: 1rem;
     }
   }
 
@@ -333,15 +338,20 @@
     }
 
     .carousel-inner {
-      padding-block: 3.25rem 8.5rem;
+      padding-block: 2rem 5rem;
+      gap: 1.5rem;
     }
 
     .carousel-title {
-      font-size: clamp(1.65rem, 8vw, 2.35rem);
+      font-size: clamp(1.5rem, 7vw, 2.15rem);
+    }
+    
+    .carousel-description {
+      font-size: 0.95rem;
     }
 
     .carousel-nav-arrows {
-      margin-top: 1.75rem;
+      margin-top: 1.5rem;
     }
 
     .carousel-progress-label {

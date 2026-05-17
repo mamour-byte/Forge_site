@@ -38,7 +38,7 @@ export function PartnersSection() {
 
         <div className="overflow-hidden relative">
             <motion.div
-              className="flex gap-40"
+              className="flex gap-12 md:gap-40"
               animate={{ x: ['0%', '-100%'] }}
               transition={{ repeat: Infinity, duration: 40 , ease: 'linear' }}
               >

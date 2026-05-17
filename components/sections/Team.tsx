@@ -122,11 +122,11 @@ export default function TeamShowcase({ members = DEFAULT_MEMBERS }: TeamShowcase
       <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
 
         {/* ── Photo mosaic ── */}
-        <div className="flex gap-3 flex-shrink-0 relative" style={{ height: 500 }}>
+        <div className="flex gap-3 flex-shrink-0 relative overflow-x-auto pb-4 w-full lg:w-auto snap-x" style={{ height: 520, scrollbarWidth: "none" }}>
           {cols.map((colMembers, colIdx) => (
             <div
               key={colIdx}
-              className="flex flex-col gap-3"
+              className="flex flex-col gap-3 snap-center"
               style={{ marginTop: COL_OFFSETS[colIdx] }}
             >
               {colMembers.map((member) => {
