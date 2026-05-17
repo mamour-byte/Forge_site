@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+,     "components/sections/shader.jsx", "components/sections/AetherFlowHero.jsx"  ],
   "exclude": ["node_modules"]
 }

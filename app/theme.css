@@ -1,0 +1,46 @@
+/* Palette de couleurs centralisee */
+:root {
+  --color-primary: #2C519E;
+  --color-secondary: #FFFFFF;
+  --color-accent: #6DB758;
+  --color-background: #FFFFFF;
+  --color-text: #090A0A;
+
+  --surface-soft: color-mix(in srgb, var(--color-primary) 4%, var(--color-secondary));
+  --surface-strong: color-mix(in srgb, var(--color-primary) 9%, var(--color-secondary));
+  --text-muted: color-mix(in srgb, var(--color-text) 66%, var(--color-secondary));
+  --line-subtle: color-mix(in srgb, var(--color-primary) 14%, var(--color-secondary));
+
+  --background: #f4f4f4;
+  --foreground: #090A0A;
+  --card: #FFFFFF;
+  --card-foreground: #090A0A;
+  --popover: #FFFFFF;
+  --popover-foreground: #090A0A;
+  --primary: #2C519E;
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--surface-soft);
+  --secondary-foreground: var(--color-primary);
+  --muted: var(--surface-soft);
+  --muted-foreground: var(--text-muted);
+  --accent: #6DB758;
+  --accent-foreground: #FFFFFF;
+  --destructive: #B42318;
+  --border: var(--line-subtle);
+  --input: color-mix(in srgb, var(--color-primary) 18%, var(--color-secondary));
+  --ring: color-mix(in srgb, var(--color-primary) 70%, var(--color-accent));
+  --chart-1: #2C519E;
+  --chart-2: #6DB758;
+  --chart-3: color-mix(in srgb, var(--color-primary) 70%, var(--color-text));
+  --chart-4: color-mix(in srgb, var(--color-accent) 72%, var(--color-primary));
+  --chart-5: color-mix(in srgb, var(--color-text) 70%, var(--color-primary));
+  --radius: 0.625rem;
+  --sidebar: var(--surface-soft);
+  --sidebar-foreground: #090A0A;
+  --sidebar-primary: #2C519E;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: var(--surface-strong);
+  --sidebar-accent-foreground: var(--color-primary);
+  --sidebar-border: var(--line-subtle);
+  --sidebar-ring: var(--ring);
+}
