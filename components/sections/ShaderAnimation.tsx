@@ -3,16 +3,18 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import type { LucideIcon } from "lucide-react";
 import * as React from 'react';
 
 
+type FloatingHeroIcon = React.ComponentType<{ className?: string }>;
 
 // Interface for the props of each individual icon.
 interface IconProps {
   id: number;
-  icon: LucideIcon;
+  icon: FloatingHeroIcon;
   className: string; // Used for custom positioning of the icon.
+  iconClassName?: string;
+  wrapperClassName?: string;
 }
 
 // Interface for the main hero component's props.
@@ -95,7 +97,10 @@ const Icon = ({
     >
       {/* Inner wrapper for the continuous floating animation */}
       <motion.div
-        className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 p-3 rounded-3xl shadow-xl bg-card/80 backdrop-blur-md border border-border/10"
+        className={cn(
+          "flex items-center justify-center w-16 h-16 md:w-20 md:h-20 p-3 rounded-3xl shadow-xl backdrop-blur-md border",
+          iconData.wrapperClassName ?? "bg-card/80 border-border/10"
+        )}
         animate={{
           y: [0, -8, 0, 8, 0],
           x: [0, 6, 0, -6, 0],
@@ -108,7 +113,12 @@ const Icon = ({
           ease: 'easeInOut',
         }}
       >
-        <IconComponent className="w-8 h-8 md:w-10 md:h-10 text-foreground" />
+        <IconComponent
+          className={cn(
+            "w-8 h-8 md:w-10 md:h-10",
+            iconData.iconClassName ?? "text-foreground"
+          )}
+        />
       </motion.div>
     </motion.div>
   );

@@ -94,7 +94,7 @@ export default function Hero() {
 
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(color-mix(in_srgb,var(--primary)_6%,transparent)_1px,transparent_1px),linear-gradient(90deg,color-mix(in_srgb,var(--primary)_6%,transparent)_1px,transparent_1px)] bg-[size:96px_96px] opacity-35" />
 
-      <div className="mx-auto flex min-h-screen w-full max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto flex min-h-[80dvh] w-full max-w-7xl items-center px-4 pb-20 pt-32 sm:px-6 sm:pt-40 lg:px-8 lg:py-20">
         <div className="grid w-full items-center gap-12 lg:grid-cols-[minmax(0,1fr)_520px]">
           <div className="relative z-10 max-w-3xl">
             <motion.div
@@ -121,7 +121,7 @@ export default function Hero() {
                 <h1
                   className={cn(
                     syne.className,
-                    "mb-7 max-w-3xl text-[46px] font-extrabold leading-[0.98] tracking-normal text-foreground sm:text-[62px] lg:text-[82px]"
+                    "mb-6 max-w-3xl text-[36px] font-extrabold leading-[1.1] tracking-normal text-foreground sm:text-[54px] sm:leading-[0.98] lg:text-[82px]"
                   )}
                   style={{
                     color: "transparent",
@@ -134,7 +134,7 @@ export default function Hero() {
                 <p
                   className={cn(
                     syne.className,
-                    "max-w-2xl text-[18px] font-bold leading-8 text-muted-foreground sm:text-[22px] sm:leading-9"
+                    "max-w-2xl text-[16px] font-medium leading-relaxed text-muted-foreground sm:text-[20px] sm:leading-9 lg:text-[22px]"
                   )}
                 >
                   {currentSlide.description}
@@ -142,10 +142,10 @@ export default function Hero() {
               </motion.div>
             </AnimatePresence>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:items-center">
               <Link
                 href="#contact"
-                className="group inline-flex h-13 items-center justify-center gap-2 rounded-[8px] bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-[0_16px_42px_color-mix(in_srgb,var(--primary)_20%,transparent)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
+                className="group inline-flex w-full sm:w-auto h-13 items-center justify-center gap-2 rounded-[8px] bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-[0_16px_42px_color-mix(in_srgb,var(--primary)_20%,transparent)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
               >
                 Démarrer un projet
                 <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -153,13 +153,13 @@ export default function Hero() {
 
               <Link
                 href="/contact"
-                className="inline-flex h-13 items-center justify-center rounded-[8px] border border-border bg-card px-7 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/30 hover:bg-muted"
+                className="inline-flex w-full sm:w-auto h-13 items-center justify-center rounded-[8px] border border-border bg-card px-7 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/30 hover:bg-muted"
               >
                 Contactez-nous
               </Link>
             </div>
 
-            <div className="mt-14 flex items-center gap-4">
+            <div className="mt-10 flex items-center gap-4 lg:mt-14">
               <button
                 type="button"
                 onClick={handlePrev}
@@ -180,7 +180,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative flex h-[620px] items-center justify-center overflow-hidden">
+          <div className="relative hidden lg:flex h-[620px] items-center justify-center overflow-hidden">
             <div className="absolute h-[520px] w-[520px] rounded-full border border-primary/8" />
             <div className="absolute h-[400px] w-[400px] rounded-full border border-primary/8" />
             <div className="absolute h-[280px] w-[280px] rounded-full border border-primary/8" />

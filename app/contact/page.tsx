@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ChangeEvent, type FormEvent, type ReactNode } from "react";
+import { useState, type ChangeEvent, type ComponentType, type FormEvent, type ReactNode } from "react";
 import { motion } from "framer-motion";
 import {
     Calendar,
@@ -11,15 +11,8 @@ import {
     MessageCircle,
     Phone,
     Send,
-    Shield,
-    Users,
-    // Linkedin,
-    // Zap,
-    // Github,
-    // Twitter,
-    // Instagram,
-    // Facebook
 } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 
 type ContactForm = {
     name: string;
@@ -38,6 +31,13 @@ type ContactMethod = {
     contact: string;
     iconClassName: string;
     iconWrapClassName: string;
+};
+
+type SocialLink = {
+    icon: ComponentType<{ className?: string; size?: number }>;
+    label: string;
+    href: string;
+    className: string;
 };
 
 const initialForm: ContactForm = {
@@ -127,6 +127,38 @@ const faqs = [
     },
 ];
 
+// Remplacez ces href par les liens officiels de vos reseaux sociaux.
+const socialLinks: SocialLink[] = [
+    {
+        icon: FaInstagram,
+        label: "Instagram",
+        href: "https://www.instagram.com/votre-compte",
+        className:
+            "text-[var(--primary)] hover:border-[var(--primary)]/30 hover:bg-[color-mix(in_srgb,var(--primary)_10%,var(--card))]",
+    },
+    {
+        icon: FaFacebookF,
+        label: "Facebook",
+        href: "https://www.facebook.com/votre-page",
+        className:
+            "text-[color-mix(in_srgb,var(--primary)_82%,var(--accent))] hover:border-[var(--primary)]/30 hover:bg-[color-mix(in_srgb,var(--primary)_10%,var(--card))]",
+    },
+    {
+        icon: FaLinkedinIn,
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/company/votre-entreprise",
+        className:
+            "text-[var(--accent)] hover:border-[var(--accent)]/35 hover:bg-[color-mix(in_srgb,var(--accent)_12%,var(--card))]",
+    },
+    {
+        icon: FaWhatsapp,
+        label: "WhatsApp",
+        href: "https://wa.me/221778569823",
+        className:
+            "text-[color-mix(in_srgb,var(--accent)_72%,var(--primary))] hover:border-[var(--accent)]/35 hover:bg-[color-mix(in_srgb,var(--accent)_12%,var(--card))]",
+    },
+];
+
 const inputClassName =
     "w-full rounded-[8px] border border-border bg-background px-4 py-3.5 text-sm text-foreground shadow-sm outline-none transition placeholder:text-muted-foreground/60 focus:border-primary/50 focus:ring-3 focus:ring-primary/15";
 
@@ -155,7 +187,7 @@ export default function ContactPage() {
             setIsSubmitted(true);
             setFormData(initialForm);
             window.setTimeout(() => setIsSubmitted(false), 3000);
-        } catch (e) {
+        } catch {
             alert("Erreur lors de l'envoi du message. Merci de réessayer.");
         } finally {
             setIsSubmitting(false);
@@ -459,17 +491,14 @@ function InfoPanel() {
             <div className="mt-7 border-t border-border pt-6">
                 <h3 className="text-sm font-semibold">Suivez-nous</h3>
                 <div className="mt-4 flex gap-3">
-                    {[
-                        { icon: Users, label: "LinkedIn" },
-                        { icon: Shield, label: "GitHub" },
-                        { icon: Calendar, label: "Instagram" },
-                        { icon: MessageCircle, label: "WhatsApp" },
-                    ].map(({ icon: Icon, label }) => (
+                    {socialLinks.map(({ icon: Icon, label, href, className }) => (
                         <a
                             key={label}
-                            href="#"
+                            href={href}
                             aria-label={label}
-                            className="flex size-10 items-center justify-center rounded-[8px] bg-muted text-muted-foreground transition hover:bg-primary hover:text-primary-foreground"
+                            target="_blank"
+                            rel="noreferrer"
+                            className={`flex size-10 items-center justify-center rounded-[8px] border border-border bg-muted transition duration-200 hover:-translate-y-0.5 ${className}`}
                         >
                             <Icon size={18} />
                         </a>
@@ -479,11 +508,6 @@ function InfoPanel() {
         </div>
     );
 }
-
-
-
-
-
 
 
 

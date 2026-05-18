@@ -1,18 +1,74 @@
 "use client";
 
-import { ArrowRight, Sparkles, Layers, PenTool, Layout, Video, Megaphone, Target, BarChart3, Palette } from "lucide-react";
+import { ArrowRight, Layers, PenTool, Video, Megaphone, Target, Palette } from "lucide-react";
+import { FaBehance, FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterestP, FaTiktok, FaWhatsapp, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { FloatingIconsHero, RevealImageList } from "@/components/sections/ShaderAnimation";
 import IntegrationHero from "@/components/sections/Tools";
 
 const marketingHeroIcons = [
-    { id: 1, icon: Sparkles, className: "left-[8%] top-[18%]" },
-    { id: 2, icon: Layers, className: "right-[12%] top-[16%]" },
-    { id: 3, icon: PenTool, className: "left-[18%] bottom-[22%]" },
-    { id: 4, icon: Layout, className: "right-[18%] bottom-[24%]" },
-    { id: 5, icon: Megaphone, className: "left-[42%] top-[12%]" },
-    { id: 6, icon: Target, className: "right-[34%] bottom-[14%]" },
-    { id: 7, icon: BarChart3, className: "left-[6%] top-[52%]" },
-    { id: 8, icon: Palette, className: "right-[7%] top-[50%]" },
+    {
+        id: 1,
+        icon: FaInstagram,
+        className: "left-[8%] top-[18%]",
+        iconClassName: "text-[var(--primary)]",
+        wrapperClassName: "bg-[color-mix(in_srgb,var(--primary)_8%,var(--card))] border-[color-mix(in_srgb,var(--primary)_20%,transparent)]",
+    },
+    {
+        id: 2,
+        icon: FaLinkedinIn,
+        className: "right-[12%] top-[16%]",
+        iconClassName: "text-[var(--accent)]",
+        wrapperClassName: "bg-[color-mix(in_srgb,var(--accent)_10%,var(--card))] border-[color-mix(in_srgb,var(--accent)_24%,transparent)]",
+    },
+    {
+        id: 3,
+        icon: FaFacebookF,
+        className: "left-[18%] bottom-[22%]",
+        iconClassName: "text-[color-mix(in_srgb,var(--primary)_82%,var(--accent))]",
+        wrapperClassName: "bg-[color-mix(in_srgb,var(--primary)_7%,var(--card))] border-[color-mix(in_srgb,var(--primary)_18%,transparent)]",
+    },
+    {
+        id: 4,
+        icon: FaTiktok,
+        className: "right-[18%] bottom-[24%]",
+        iconClassName: "text-[var(--foreground)]",
+        wrapperClassName: "bg-[color-mix(in_srgb,var(--foreground)_5%,var(--card))] border-[color-mix(in_srgb,var(--foreground)_12%,transparent)]",
+    },
+    {
+        id: 5,
+        icon: FaYoutube,
+        className: "left-[42%] top-[12%]",
+        iconClassName: "text-[color-mix(in_srgb,var(--primary)_55%,var(--accent))]",
+        wrapperClassName: "bg-[color-mix(in_srgb,var(--primary)_6%,var(--card))] border-[color-mix(in_srgb,var(--primary)_16%,transparent)]",
+    },
+    {
+        id: 6,
+        icon: FaWhatsapp,
+        className: "right-[34%] bottom-[14%]",
+        iconClassName: "text-[var(--accent)]",
+        wrapperClassName: "bg-[color-mix(in_srgb,var(--accent)_12%,var(--card))] border-[color-mix(in_srgb,var(--accent)_26%,transparent)]",
+    },
+    {
+        id: 7,
+        icon: FaXTwitter,
+        className: "left-[6%] top-[52%]",
+        iconClassName: "text-[var(--primary)]",
+        wrapperClassName: "bg-[color-mix(in_srgb,var(--primary)_9%,var(--card))] border-[color-mix(in_srgb,var(--primary)_22%,transparent)]",
+    },
+    {
+        id: 8,
+        icon: FaPinterestP,
+        className: "right-[7%] top-[50%]",
+        iconClassName: "text-[color-mix(in_srgb,var(--accent)_70%,var(--primary))]",
+        wrapperClassName: "bg-[color-mix(in_srgb,var(--accent)_9%,var(--card))] border-[color-mix(in_srgb,var(--accent)_22%,transparent)]",
+    },
+    {
+        id: 9,
+        icon: FaBehance,
+        className: "right-[70%] top-[10%]",
+        iconClassName: "text-[color-mix(in_srgb,var(--accent)_70%,var(--primary))]",
+        wrapperClassName: "bg-[color-mix(in_srgb,var(--accent)_9%,var(--card))] border-[color-mix(in_srgb,var(--accent)_22%,transparent)]",
+    },
 ];
 
 export default function MarketingBrandingPage() {
