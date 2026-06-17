@@ -6,6 +6,7 @@ import {
     Calendar,
     CheckCircle,
     Clock,
+    Globe,
     Mail,
     MapPin,
     MessageCircle,
@@ -82,10 +83,18 @@ const contactMethods: ContactMethod[] = [
         icon: <Mail size={30} />,
         title: "Email",
         description: "Envoyez-nous un message detaille.",
-        contact: "contact@forge.dev",
+        contact: "contact@forge-sn.com",
         iconClassName: "text-primary",
         iconWrapClassName: "bg-primary/10",
     },
+    // {
+    //     icon: <Globe size={30} />,
+    //     title: "Site web",
+    //     description: "Retrouvez nos services et realisations en ligne.",
+    //     contact: "www.forge-sn.com",
+    //     iconClassName: "text-accent",
+    //     iconWrapClassName: "bg-accent/10",
+    // },
     {
         icon: <Phone size={30} />,
         title: "Telephone",
@@ -460,7 +469,13 @@ function InfoPanel() {
         {
             icon: Mail,
             label: "Email",
-            value: "contact@forge.dev",
+            value: "contact@forge-sn.com",
+            color: "bg-primary/10 text-primary",
+        },
+        {
+            icon: Globe,
+            label: "Site web",
+            value: "www.forge-sn.com",
             color: "bg-primary/10 text-primary",
         },
         {

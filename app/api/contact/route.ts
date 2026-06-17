@@ -18,7 +18,7 @@ export async function POST(req: Request) {
 
     const mailOptions = {
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
-      to: "mamourf958@gmail.com", // Ou l'adresse de réception souhaitée
+      to: process.env.CONTACT_TO_EMAIL || "contact@forge-sn.com",
       subject: `Nouveau message de contact de ${name}`,
       replyTo: email,
       html: `

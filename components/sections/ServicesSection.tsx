@@ -57,6 +57,7 @@ const services = [
       "Solutions cloud & serveurs",
       "Maintenance informatique",
       "Sécurité réseau",
+      "Vidéosurveillance & contrôle d'accès",
     ],
   },
 ];

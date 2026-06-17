@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Globe, Mail, MapPin, Phone } from "lucide-react";
 import logoImg from "@/public/assets/logo/logo.png";
 
 const serviceLinks = [
@@ -18,8 +18,13 @@ const companyLinks = [
 const contactItems = [
   {
     icon: Mail,
-    label: "contact@forge.dev",
-    href: "mailto:contact@forge.dev",
+    label: "contact@forge-sn.com",
+    href: "mailto:contact@forge-sn.com",
+  },
+  {
+    icon: Globe,
+    label: "www.forge-sn.com",
+    href: "https://www.forge-sn.com",
   },
   {
     icon: Phone,
