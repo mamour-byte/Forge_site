@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/layout/Header";
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
   title: {
     default: "Forge | Agence digitale à Dakar — Web, Marketing & Infrastructure",
     template: "%s | Forge",
+  },
+  verification: {
+    google: "M7NUGdzHnXP2Ftb6uVhH6W_W-anjf6ogxPGp3WYU4Ow",
   },
   description:
     "Forge accompagne les entreprises au Sénégal en digitalisation, marketing digital et infrastructure IT : sites web, applications, branding et réseaux sécurisés.",
@@ -47,6 +51,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

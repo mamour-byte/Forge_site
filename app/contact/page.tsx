@@ -2,6 +2,7 @@
 
 import { useState, type ChangeEvent, type ComponentType, type FormEvent, type ReactNode } from "react";
 import { motion } from "framer-motion";
+import { track } from "@vercel/analytics";
 import {
     Calendar,
     CheckCircle,
@@ -193,6 +194,10 @@ export default function ContactPage() {
                 body: JSON.stringify(formData),
             });
             if (!res.ok) throw new Error("Erreur lors de l'envoi");
+            track("contact_form_submitted", {
+                page: "contact",
+                source: "site",
+            });
             setIsSubmitted(true);
             setFormData(initialForm);
             window.setTimeout(() => setIsSubmitted(false), 3000);
