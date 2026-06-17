@@ -6,19 +6,31 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { name, email, company, projectType, budget, message, timeline } = body;
 
+    const smtpUser = process.env.SMTP_USER?.trim();
+    const smtpPass = process.env.SMTP_PASS?.trim();
+    const smtpFrom = process.env.SMTP_FROM?.trim() || smtpUser;
+    const contactToEmail = process.env.CONTACT_TO_EMAIL?.trim() || "contact@forge-sn.com";
+
+    if (!smtpUser || !smtpPass) {
+      return NextResponse.json(
+        { error: "SMTP credentials are missing. Set SMTP_USER and SMTP_PASS in the production environment." },
+        { status: 500 }
+      );
+    }
+
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || "smtp.gmail.com",
       port: Number(process.env.SMTP_PORT) || 465,
       secure: process.env.SMTP_SECURE !== "false", // true for 465, false for other ports
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: smtpUser,
+        pass: smtpPass,
       },
     });
 
     const mailOptions = {
-      from: process.env.SMTP_FROM || process.env.SMTP_USER,
-      to: process.env.CONTACT_TO_EMAIL || "contact@forge-sn.com",
+      from: smtpFrom,
+      to: contactToEmail,
       subject: `Nouveau message de contact de ${name}`,
       replyTo: email,
       html: `
