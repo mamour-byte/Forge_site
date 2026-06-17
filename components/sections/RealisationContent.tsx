@@ -14,30 +14,30 @@ const stats = [
   { value: "24h", label: "délai de réponse" },
 ];
 
-const categories = ["Tous", "Infrastructure", "Sécurité", "Digitalisation", "Maintenance"];
+const categories = ["Tous", "Site Web & Applications ", "Infrastructure", "Maintenance"];
 
 const projects = [
   {
-    title: "Infrastructure réseau pour bureaux professionnels",
-    category: "Infrastructure",
+    title: "Infrastructure de surveillance vidéo Wifi",
+    category: " Infrastructure",
     description:
-      "Création d'un réseau local structuré avec baie de brassage, switchs managés et câblage prêt pour la croissance de l'équipe.",
+      "Installation de caméras IP connectées en Wifi, avec enregistreur NVR et accès distant sécurisé pour superviser les zones sensibles sans câblage complexe.",
     image: "/assets/images/cablage.png",
     icon: Network,
     results: ["Réseau plus stable", "Baie technique documentée", "Maintenance simplifiée"],
   },
   {
-    title: "Système de vidéosurveillance IP",
-    category: "Sécurité",
+    title: "Naatal",
+    category: " Site Web & Applications",
     description:
-      "Installation de caméras IP, enregistreur NVR et accès distant sécurisé pour superviser les zones sensibles en continu.",
-    image: "/assets/images/camera.jpg",
+      "Application mobile cross platform de gestion de ventes, stock et facturation  pour les commerces , petite et moyenne entreprise au Sénégal, ",
+    image: "/assets/images/",
     icon: Camera,
     results: ["Accès distant sécurisé", "Couverture complète", "Enregistrement centralisé"],
   },
   {
     title: "Contrôle d'accès et interphonie",
-    category: "Sécurité",
+    category: "Infrastructure",
     description:
       "Mise en place de badges, interphones et gestion des accès pour sécuriser les entrées du personnel et des visiteurs.",
     image: "/assets/images/acces.png",
@@ -88,12 +88,12 @@ export default function RealisationContent() {
 
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)] font-sans">
-      
+
       {/* HERO SECTION - Minimaliste & Typographique */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 overflow-hidden">
         {/* Subtle mesh gradients for premium feel */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[400px] bg-[var(--primary)]/5 blur-[120px] rounded-full pointer-events-none" />
-        
+
         <div className="relative mx-auto max-w-5xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -123,7 +123,7 @@ export default function RealisationContent() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-8 mx-auto max-w-2xl text-lg md:text-xl text-[var(--text-muted)] leading-relaxed"
           >
-            Découvrez nos réalisations en digitalisation, infrastructure réseau et sécurité. 
+            Découvrez nos réalisations en digitalisation, infrastructure réseau et sécurité.
             Des solutions fiables, élégantes et pensées pour durer.
           </motion.p>
         </div>
@@ -134,7 +134,7 @@ export default function RealisationContent() {
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 border-y border-[var(--border)] py-10">
             {stats.map((stat, i) => (
-              <motion.div 
+              <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -155,14 +155,14 @@ export default function RealisationContent() {
       {/* PROJECTS SECTION - Bento Grid Interactive */}
       <section id="realisations" className="px-6 pb-24 md:pb-32">
         <div className="mx-auto max-w-7xl">
-          
+
           {/* Header & Filters */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div className="max-w-xl">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Projets sélectionnés</h2>
               <p className="mt-4 text-[var(--text-muted)]">Filtrez nos réalisations par domaine d'expertise.</p>
             </div>
-            
+
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => {
                 const isActive = activeCategory === category;
@@ -172,8 +172,8 @@ export default function RealisationContent() {
                     onClick={() => setActiveCategory(category)}
                     className={cn(
                       "px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border",
-                      isActive 
-                        ? "bg-[var(--primary)] text-white border-[var(--primary)] shadow-md shadow-[var(--primary)]/20" 
+                      isActive
+                        ? "bg-[var(--primary)] text-white border-[var(--primary)] shadow-md shadow-[var(--primary)]/20"
                         : "bg-[var(--card)] text-[var(--text-muted)] border-[var(--border)] hover:border-[var(--primary)]/40 hover:text-[var(--foreground)]"
                     )}
                   >
@@ -185,8 +185,8 @@ export default function RealisationContent() {
           </div>
 
           {/* Grid */}
-          <motion.div 
-            layout 
+          <motion.div
+            layout
             className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
           >
             <AnimatePresence mode="popLayout">
@@ -242,7 +242,7 @@ export default function RealisationContent() {
                       )}>
                         {project.title}
                       </h3>
-                      
+
                       <p className="text-[var(--text-muted)] leading-relaxed text-sm mb-6 flex-1">
                         {project.description}
                       </p>
@@ -276,7 +276,7 @@ export default function RealisationContent() {
           <div className="grid md:grid-cols-3 gap-8 md:gap-12 relative">
             {/* Connecting line for desktop */}
             <div className="hidden md:block absolute top-6 left-0 w-full h-[1px] bg-[var(--border)]" />
-            
+
             {processSteps.map((step, index) => (
               <div key={step.title} className="relative z-10">
                 <span className="flex size-12 items-center justify-center rounded-full bg-[var(--card)] border border-[var(--border)] text-lg font-bold text-[var(--primary)] shadow-sm mb-6">

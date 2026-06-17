@@ -1,9 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import logoImg from "@/public/assets/logo/logo.png";
+import logoIconImg from "@/public/assets/logo/logoIcon.png";
 
 const navigation = [
   { href: "/", label: "Accueil" },
@@ -47,21 +50,29 @@ export default function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="group relative z-20 flex items-center gap-3 outline-none"
+          className="group relative z-20 flex items-center outline-none"
           onClick={() => setIsOpen(false)}
         >
-          <div className="flex size-10 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--primary)] to-[color-mix(in_srgb,var(--primary)_75%,var(--foreground))] text-white shadow-lg shadow-[var(--primary)]/30 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-[var(--primary)]/40">
-            <span className="font-bold text-lg">F</span>
+          {/* Logo complet pour les écrans larges */}
+          <div className="hidden md:block">
+            <Image
+              src={logoImg}
+              alt="Forge Logo"
+              height={44}
+              priority
+              className="h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </div>
-          <span className="flex flex-col leading-none">
-            <span className="text-lg font-bold tracking-tight text-[var(--foreground)]">Forge</span>
-            <span className={cn(
-              "text-[10px] font-bold uppercase tracking-widest text-[var(--primary)] transition-all duration-300 origin-left",
-              scrolled ? "opacity-0 scale-x-0 h-0 overflow-hidden" : "opacity-100 scale-x-100 mt-1.5"
-            )}>
-              Solutions Digitales
-            </span>
-          </span>
+          {/* Logo icône pour les écrans réduits (mobile) */}
+          <div className="block md:hidden">
+            <Image
+              src={logoIconImg}
+              alt="Forge Icon"
+              height={36}
+              priority
+              className="h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

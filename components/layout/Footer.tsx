@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
+import logoImg from "@/public/assets/logo/logo.png";
 
 const serviceLinks = [
   { href: "/services/marketing", label: "Marketing digital" },
@@ -21,8 +23,8 @@ const contactItems = [
   },
   {
     icon: Phone,
-    label: "+221 77 000 00 00",
-    href: "tel:+221770000000",
+    label: "+221 70 618 60 27",
+    href: "tel:+221706186027",
   },
   {
     icon: MapPin,
@@ -55,16 +57,13 @@ export default function Footer() {
       <div className="relative mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,2fr)]">
           <div className="max-w-md">
-            <Link href="/" className="inline-flex items-center gap-3">
-              <span className="flex size-11 items-center justify-center rounded-[8px] bg-primary text-lg font-bold text-white shadow-lg shadow-primary/25">
-                F
-              </span>
-              <span className="flex flex-col leading-none">
-                <span className="text-xl font-bold tracking-tight">Forge</span>
-                <span className="mt-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-accent">
-                  Solutions Digitales
-                </span>
-              </span>
+            <Link href="/" className="inline-flex items-center">
+              <Image
+                src={logoImg}
+                alt="Forge Logo"
+                height={40}
+                className="h-10 w-auto object-contain transition-transform duration-300 hover:scale-105"
+              />
             </Link>
 
             <p className="mt-6 text-sm leading-7 text-white/68">

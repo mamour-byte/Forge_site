@@ -6,6 +6,7 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ProjectTypesSection } from "@/components/sections/ProjectTypesSection";
 import TeamShowcase from "@/components/sections/Team";
 import { ShuffleHero } from "@/components/sections/Galery";
+import { FloatingChatWidget } from "@/components/layout/Floatingchatbot";
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <RealizationStatsSection />
       <TeamShowcase />
       <PartnersSection />
+      <FloatingChatWidget />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import RealisationContent from "@/components/sections/RealisationContent";
+import { ParticleTextEffect } from "@/components/sections/TextComponent";
 
 export const metadata: Metadata = {
   title: "Nos réalisations | Forge",
@@ -8,5 +9,12 @@ export const metadata: Metadata = {
 };
 
 export default function RealisationPage() {
-  return <RealisationContent />;
+  return (
+    <> 
+      <ParticleTextEffect/>
+      <RealisationContent/>;     
+    </>
+  );
+  
+  
 }

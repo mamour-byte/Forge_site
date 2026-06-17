@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Lottie from "lottie-react";
 
 import { cn } from "@/lib/utils";
-import computerAnimation from "@/public/assets/lotties/computer.json";
+import ForgeAnimation from "@/public/assets/lotties/digit.json";
 import digitalisationAnimation from "@/public/assets/lotties/digitalisation.json";
 import infrastructureAnimation from "@/public/assets/lotties/infrastructure.json";
 import marketingAnimation from "@/public/assets/lotties/marketing.json";
@@ -31,7 +31,7 @@ const slides = [
     title: "Forge",
     description:
       "Agence digitale à Dakar : nous concevons des solutions web, marketing et infrastructure pour aider les PME et entreprises sénégalaises à croître avec clarté.",
-    animation: digitalisationAnimation,
+    animation: ForgeAnimation,
     accent: "from-accent/16 to-white/70",
   },
   {

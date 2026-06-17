@@ -90,7 +90,7 @@ const contactMethods: ContactMethod[] = [
         icon: <Phone size={30} />,
         title: "Telephone",
         description: "Discutons directement de votre projet.",
-        contact: "+221 77 856 98 23",
+        contact: "+221 70 618 60 27",
         iconClassName: "text-accent",
         iconWrapClassName: "bg-accent/10",
     },
@@ -132,28 +132,28 @@ const socialLinks: SocialLink[] = [
     {
         icon: FaInstagram,
         label: "Instagram",
-        href: "https://www.instagram.com/votre-compte",
+        href: "https://www.instagram.com/forge_group_sn?igsh=bHk5eGNuNDF4eDN0&utm_source=qr",
         className:
             "text-[var(--primary)] hover:border-[var(--primary)]/30 hover:bg-[color-mix(in_srgb,var(--primary)_10%,var(--card))]",
     },
     {
         icon: FaFacebookF,
         label: "Facebook",
-        href: "https://www.facebook.com/votre-page",
+        href: "https://www.facebook.com/share/18ZqetxDMf/?mibextid=wwXIfr",
         className:
             "text-[color-mix(in_srgb,var(--primary)_82%,var(--accent))] hover:border-[var(--primary)]/30 hover:bg-[color-mix(in_srgb,var(--primary)_10%,var(--card))]",
     },
     {
         icon: FaLinkedinIn,
         label: "LinkedIn",
-        href: "https://www.linkedin.com/company/votre-entreprise",
+        href: "https://www.linkedin.com/company/forgesn/",
         className:
             "text-[var(--accent)] hover:border-[var(--accent)]/35 hover:bg-[color-mix(in_srgb,var(--accent)_12%,var(--card))]",
     },
     {
         icon: FaWhatsapp,
         label: "WhatsApp",
-        href: "https://wa.me/221778569823",
+        href: "https://wa.me/221706186027",
         className:
             "text-[color-mix(in_srgb,var(--accent)_72%,var(--primary))] hover:border-[var(--accent)]/35 hover:bg-[color-mix(in_srgb,var(--accent)_12%,var(--card))]",
     },
@@ -454,7 +454,7 @@ function InfoPanel() {
         {
             icon: Phone,
             label: "Telephone",
-            value: "+221 77 856 98 23",
+            value: "+221 70 618 60 27",
             color: "bg-accent/10 text-accent",
         },
         {
