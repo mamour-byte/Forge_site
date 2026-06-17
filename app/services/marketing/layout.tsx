@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Marketing digital & branding | Forge",
+  title: "Marketing digital & branding",
   description:
     "Stratégie de marque, identité visuelle, SEO, réseaux sociaux et campagnes publicitaires à Dakar. Agence marketing digital pour entreprises au Sénégal.",
   keywords: [
@@ -11,6 +11,15 @@ export const metadata: Metadata = {
     "community management",
     "SEO entreprise",
   ],
+  alternates: {
+    canonical: "/services/marketing",
+  },
+  openGraph: {
+    title: "Marketing digital & branding | Forge",
+    description:
+      "Stratégie de marque, identité visuelle, SEO, réseaux sociaux et campagnes publicitaires à Dakar. Agence marketing digital pour entreprises au Sénégal.",
+    url: "/services/marketing",
+  },
 };
 
 export default function MarketingLayout({ children }: { children: React.ReactNode }) {

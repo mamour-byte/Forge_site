@@ -11,7 +11,7 @@ import { FloatingChatWidget } from "@/components/layout/Floatingchatbot";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Hero />
       {/* <Animation /> */}
       <LottieSection />
@@ -22,6 +22,6 @@ export default function Home() {
       <TeamShowcase />
       <PartnersSection />
       <FloatingChatWidget />
-    </>
+    </main>
   );
 }

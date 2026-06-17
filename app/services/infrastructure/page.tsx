@@ -7,7 +7,7 @@ import Galery from "@/components/sections/Galery";
 
 export default function InfrastructurePage() {
   return (
-    <div className="bg-[var(--background)] min-h-screen">
+    <main className="bg-[var(--background)] min-h-screen">
       {/* 1. Custom Hero - Tech / Grid Vibe */}
       <AetherFlowHero />
 
@@ -152,6 +152,6 @@ export default function InfrastructurePage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

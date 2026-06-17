@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Digitalisation & développement web | Forge",
+  title: "Digitalisation & développement web",
   description:
     "Agence de digitalisation à Dakar : sites web, applications métier, ERP, mobiles, automatisation et cloud. Solutions sur mesure pour PME et entreprises au Sénégal.",
   keywords: [
@@ -11,6 +11,15 @@ export const metadata: Metadata = {
     "ERP PME Afrique",
     "automatisation processus",
   ],
+  alternates: {
+    canonical: "/services/digitalisation",
+  },
+  openGraph: {
+    title: "Digitalisation & développement web | Forge",
+    description:
+      "Agence de digitalisation à Dakar : sites web, applications métier, ERP, mobiles, automatisation et cloud. Solutions sur mesure pour PME et entreprises au Sénégal.",
+    url: "/services/digitalisation",
+  },
 };
 
 export default function DigitalisationLayout({ children }: { children: React.ReactNode }) {

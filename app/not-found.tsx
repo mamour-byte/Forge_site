@@ -8,7 +8,7 @@ import notFoundAnimation from "../public/assets/lotties/not_found.json";
 
 export default function NotFound() {
   return (
-    <section className="flex min-h-screen flex-col items-center justify-center bg-background px-4">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-background px-4">
       <div className="mb-8 w-full max-w-xs md:max-w-md">
         <Lottie animationData={notFoundAnimation} loop className="h-auto w-full" />
       </div>
@@ -22,6 +22,6 @@ export default function NotFound() {
       >
         Retour a l&apos;accueil
       </Link>
-    </section>
+    </main>
   );
 }

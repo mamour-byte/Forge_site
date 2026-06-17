@@ -74,7 +74,7 @@ const marketingHeroIcons = [
 export default function MarketingBrandingPage() {
 
     return (
-        <>             
+        <main>             
         {/* 1. Hero Section */}
             <FloatingIconsHero
                 title="Branding & Marketing Digital"
@@ -180,6 +180,6 @@ export default function MarketingBrandingPage() {
                 </div>
             </section>
 
-        </>
+        </main>
     );
 }

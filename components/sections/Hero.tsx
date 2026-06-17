@@ -144,7 +144,7 @@ export default function Hero() {
 
             <div className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:items-center">
               <Link
-                href="#contact"
+                href="/contact"
                 className="group inline-flex w-full sm:w-auto h-13 items-center justify-center gap-2 rounded-[8px] bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-[0_16px_42px_color-mix(in_srgb,var(--primary)_20%,transparent)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
               >
                 Démarrer un projet

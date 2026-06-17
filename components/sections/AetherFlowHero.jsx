@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap } from 'lucide-react';
 
@@ -239,10 +240,13 @@ const AetherFlowHero = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    <button className="px-8 py-4 bg-[var(--primary)] text-[var(--primary-foreground)] font-semibold rounded-lg shadow-lg shadow-[color-mix(in_srgb,var(--primary)_24%,transparent)] hover:bg-[color-mix(in_srgb,var(--primary)_88%,var(--foreground))] focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-[var(--ring)] transition-colors duration-300 flex items-center gap-2 mx-auto">
-                        Demande une etude
+                    <Link
+                        href="/contact"
+                        className="px-8 py-4 bg-[var(--primary)] text-[var(--primary-foreground)] font-semibold rounded-lg shadow-lg shadow-[color-mix(in_srgb,var(--primary)_24%,transparent)] hover:bg-[color-mix(in_srgb,var(--primary)_88%,var(--foreground))] focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-[var(--ring)] transition-colors duration-300 flex items-center gap-2 mx-auto"
+                    >
+                        Demander une étude
                         <ArrowRight className="h-5 w-5" />
-                    </button>
+                    </Link>
                 </motion.div>
             </div>
         </div>
