@@ -184,7 +184,7 @@ const CyberMatrixHero = () => {
                 >
                     <Link
                         href="/contact"
-                        className="px-8 py-4 bg-white text-black font-semibold rounded-lg shadow-lg hover:bg-gray-200 transition-colors duration-300 flex items-center gap-2 mx-auto"
+                        className="px-8 py-4 bg-white text-black font-semibold rounded-lg shadow-lg hover:bg-gray-200 transition-colors duration-300 inline-flex items-center gap-2 mx-auto"
                     >
                         Contactez-nous
             <ArrowRight className="h-5 w-5" />
