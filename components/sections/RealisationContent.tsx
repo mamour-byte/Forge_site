@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, BadgeCheck, Camera, CheckCircle2, Code2, Network, Server, ShieldCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
+import ProjectsCarousel from "./ProjectCaroussel";
 
 const stats = [
   { value: "42+", label: "projets livrés" },
@@ -153,17 +154,19 @@ export default function RealisationContent() {
       </section>
 
       {/* PROJECTS SECTION - Bento Grid Interactive */}
-      <section id="realisations" className="px-6 pb-24 md:pb-32">
-        <div className="mx-auto max-w-7xl">
+
+      <ProjectsCarousel />
+      {/* <section id="realisations" className="px-6 pb-24 md:pb-32">
+        <div className="mx-auto max-w-7xl"> */}
 
           {/* Header & Filters */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+          {/* <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div className="max-w-xl">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Projets sélectionnés</h2>
               <p className="mt-4 text-[var(--text-muted)]">Filtrez nos réalisations par domaine d'expertise.</p>
-            </div>
+            </div> */}
 
-            <div className="flex flex-wrap gap-2">
+            {/* <div className="flex flex-wrap gap-2">
               {categories.map((category) => {
                 const isActive = activeCategory === category;
                 return (
@@ -182,10 +185,10 @@ export default function RealisationContent() {
                 );
               })}
             </div>
-          </div>
+          </div> */}
 
           {/* Grid */}
-          <motion.div
+          {/* <motion.div
             layout
             className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
           >
@@ -207,9 +210,9 @@ export default function RealisationContent() {
                       "group relative flex flex-col overflow-hidden rounded-[1.5rem] bg-[var(--card)] border border-[var(--border)] transition-all hover:shadow-xl hover:border-[var(--primary)]/30",
                       isFeatured ? "md:col-span-2 lg:col-span-2 md:flex-row" : "col-span-1"
                     )}
-                  >
+                  > */}
                     {/* Image Section */}
-                    <div className={cn(
+                    {/* <div className={cn(
                       "relative overflow-hidden",
                       isFeatured ? "w-full md:w-1/2 min-h-[300px] md:min-h-full" : "w-full h-[240px]"
                     )}>
@@ -220,10 +223,10 @@ export default function RealisationContent() {
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[var(--card)] via-transparent to-transparent opacity-80" />
-                    </div>
+                    </div> */}
 
                     {/* Content Section */}
-                    <div className={cn(
+                    {/* <div className={cn(
                       "flex flex-col flex-1 p-6 sm:p-8",
                       isFeatured ? "md:w-1/2 justify-center" : ""
                     )}>
@@ -263,7 +266,7 @@ export default function RealisationContent() {
           </motion.div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* METHODOLOGY SECTION - Clean Process */}
       <section className="px-6 py-24 bg-[var(--surface-soft)] border-y border-[var(--border)]">

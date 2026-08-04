@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function RealisationPage() {
   return (
     <> 
-      <ParticleTextEffect/>
+      {/* <ParticleTextEffect/> */}
       <RealisationContent/>;     
     </>
   );
